@@ -1,0 +1,50 @@
+<body>
+    <div [ngClass]="'text-center'">
+        <input (keydown.enter)="query('submit')" (keydown.esc)="query('C')" type="text"
+            placeholder="Enter the Expression"
+            style="border: 2px solid black; border-radius:8px; width:295px; height: 60px; text-align: center; text-size-adjust: inherit;"
+            [(ngModel)]="result" /><br>
+
+        <div class="table-responsive">
+            <table style="background-color: azure"
+                [ngClass]="'table table_col_padding table-striped table-hover mx-auto w-auto'">
+                <tr>
+                    <td><button (click)="query('^')">^</button></td>
+                    <td><button (click)="query('(')"><span>&#40;</span></button></td>
+                    <td><button (click)="query(')')"><span>&#41;</span></button></td>
+                    <td><button (click)="query('submit')"><b>Submit</b></button></td>
+                </tr>
+                <tr>
+                    <td><button (click)="query('sin')">sin</button></td>
+                    <td><button (click)="query('cos')">cos</button></td>
+                    <td><button (click)="query('tan')">tan</button></td>
+                    <td><button (click)="query('sqrt')">&Sqrt;</button></td>
+                </tr>
+                <tr>
+                    <td><button (click)="query(9)">9</button></td>
+                    <td><button (click)="query(8)">8</button></td>
+                    <td><button (click)="query(7)">7</button></td>
+                    <td><button (click)="query('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button (click)="query(6)">6</button></td>
+                    <td><button (click)="query(5)">5</button></td>
+                    <td><button (click)="query(4)">4</button></td>
+                    <td><button (click)="query('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button (click)="query(3)">3</button></td>
+                    <td><button (click)="query(2)">2</button></td>
+                    <td><button (click)="query(1)">1</button></td>
+                    <td><button (click)="query('/')">/</button></td>
+                </tr>
+                <tr>
+                    <td><button (click)="query(0)">0</button></td>
+                    <td><button (click)="query('C')">C</button></td>
+                    <td><button (click)="query('backspace')">&larr;</button></td>
+                    <td><button (click)="query('*')">*</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
